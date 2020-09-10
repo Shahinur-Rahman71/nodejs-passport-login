@@ -1,0 +1,34 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body bg-dark">
+        <h1 class="text-center mb-3 text-light"><i class="fas fa-sign-in-alt"></i>  Login</h1>
+        <%- include('partial/messages.ejs') %>
+        <form action="/user/login" method="POST">
+          <div class="form-group">
+            <label class="text-light" for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter Email"
+            />
+          </div>
+          <div class="form-group">
+            <label class="text-light" for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Enter Password"
+            />
+          </div>
+          <button type="submit" class="btn btn-success btn-block">Login</button>
+        </form>
+        <p class="lead mt-4 text-light">
+          No Account? <a href="/user/register">Register</a>
+        </p>
+      </div>
+    </div>
+  </div>
